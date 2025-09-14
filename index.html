@@ -153,17 +153,35 @@
 
 <script>
   const carousel = document.querySelector(".carousel");
+  const card = document.querySelector(".card");
   const btnLeft = document.querySelector(".scroll-btn.kiri");
   const btnRight = document.querySelector(".scroll-btn.kanan");
 
-  btnLeft.addEventListener("click", () => {
-    carousel.scrollBy({ left: -350, behavior: "smooth" });
-  });
+  // Clone isi untuk efek infinite
+  card.innerHTML += card.innerHTML;
+
+  let itemWidth = card.querySelector("img").offsetWidth + 10; // termasuk gap
 
   btnRight.addEventListener("click", () => {
-    carousel.scrollBy({ left: 350, behavior: "smooth" });
+    carousel.scrollBy({ left: itemWidth, behavior: "smooth" });
+
+    // Jika sampai tengah (clone habis), reset balik ke awal
+    if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+      setTimeout(() => {
+        carousel.scrollLeft = 0;
+      }, 400);
+    }
+  });
+
+  btnLeft.addEventListener("click", () => {
+    if (carousel.scrollLeft <= 0) {
+      carousel.scrollLeft = carousel.scrollWidth / 2;
+    }
+    carousel.scrollBy({ left: -itemWidth, behavior: "smooth" });
   });
 </script>
+
+
 
 </body>
 </html>

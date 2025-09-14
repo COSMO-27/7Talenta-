@@ -410,6 +410,134 @@ hr {
   height: auto;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 750px;
+}
+
+.left img {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.right {
+  display: block;
+  width: 250px;
+}
+
+.right img {
+  width: 100%;
+}
+
+/* part2 */
+.gallery2 {
+  display: flex;
+  justify-content: center;
+}
+
+.right2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 750px;
+}
+
+.right2 img {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.left2 {
+  display: block;
+  width: 225px;
+}
+
+.left2 img {
+  width: 100%;
+}
+
+/* part3 */
+.gallery3 {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.left3,
+.right3,
+.center3 {
+  display: block;
+}
+
+.left3 {
+  width: 350px;
+}
+
+.left3 img {
+  width: 100%;
+}
+
+.right3 {
+  width: 350px;
+}
+
+.right3 img {
+  width: 100%;
+}
+
+.center3 {
+  width: 225px;
+}
+
+.center3 img {
+  width: 100%;
+}
+
+.full-gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive khusus gallery */
+@media (max-width: 768px) {
+  .left img,
+  .right2 img,
+  .left2 img,
+  .left3 img,
+  .right3 img,
+  .center3 img {
+    padding: 8px; /* lebih kecil dari 15px */
+  }
+
+  .gallery3 {
+    gap: 0.8em; /* kurangi gap antar kolom */
+  }
+}
+
+@media (max-width: 480px) {
+  .left img,
+  .right2 img,
+  .left2 img,
+  .left3 img,
+  .right3 img,
+  .center3 img {
+    padding: 5px; /* makin rapat untuk layar kecil */
+  }
+
+  .gallery3 {
+    gap: 0.5em;
+  }
+}
+
 /* Responsif untuk footer */
 @media (max-width: 768px) {
   .footer-content {
