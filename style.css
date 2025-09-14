@@ -61,30 +61,52 @@ body {
 }
 
 /* ===== PROFILE SLIDER ===== */
-.profile-wrapper {
-  overflow: hidden;
+.carousel-container {
+  position: relative;
   width: 100%;
+  scroll-snap-align: center;
 }
 
-.profile-content {
+.carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth; /* biar halus */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
   display: flex;
   gap: 10px;
-  animation: slide 20s linear infinite;
 }
 
-.profile-content img {
+.card img {
   width: 350px;
   border-radius: 35px;
   flex-shrink: 0;
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--brand-color, #333);
+  color: wheat;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.scroll-btn.kiri {
+  left: 10px;
+}
+
+.scroll-btn.kanan {
+  right: 10px;
 }
 
 /* ===== FOOTER ===== */

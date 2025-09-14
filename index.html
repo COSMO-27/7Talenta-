@@ -41,16 +41,10 @@
  <img src="images/haiakusore.webp" alt="">
 </div>
 
- <div class="profile-wrapper" data-aos="zoom-in">
-  <div class="profile-content" loading="lazy">
-    <img src="images/profile/1.webp" alt="" loading="lazy">
-    <img src="images/profile/2.webp" alt="" loading="lazy">
-    <img src="images/profile/3.webp" alt="" loading="lazy">
-    <img src="images/profile/4.webp" alt="" loading="lazy">
-    <img src="images/profile/5.webp" alt="" loading="lazy">
-    <img src="images/profile/6.webp" alt="" loading="lazy">
-    <img src="images/profile/7.webp" alt="" loading="lazy">
-    <!-- Duplikasi untuk efek infinite -->
+<div class="carousel-container">
+  <button class="scroll-btn kiri">‹</button>
+ <div class="carousel" data-aos="zoom-in">
+  <div class="card" loading="lazy">
     <img src="images/profile/1.webp" alt="" loading="lazy">
     <img src="images/profile/2.webp" alt="" loading="lazy">
     <img src="images/profile/3.webp" alt="" loading="lazy">
@@ -59,6 +53,8 @@
     <img src="images/profile/6.webp" alt="" loading="lazy">
     <img src="images/profile/7.webp" alt="" loading="lazy">
   </div>
+</div>
+<button class="scroll-btn kanan">›</button>
 </div>
 
 
@@ -154,6 +150,21 @@
     once: true
   })
 </script>
+
+<script>
+  const carousel = document.querySelector(".carousel");
+  const btnLeft = document.querySelector(".scroll-btn.kiri");
+  const btnRight = document.querySelector(".scroll-btn.kanan");
+
+  btnLeft.addEventListener("click", () => {
+    carousel.scrollBy({ left: -350, behavior: "smooth" });
+  });
+
+  btnRight.addEventListener("click", () => {
+    carousel.scrollBy({ left: 350, behavior: "smooth" });
+  });
+</script>
+
 </body>
 </html>
 
