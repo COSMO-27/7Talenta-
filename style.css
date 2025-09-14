@@ -109,6 +109,31 @@ body {
   right: 10px;
 }
 
+/* ✅ Responsive untuk HP */
+@media (max-width: 768px) {
+  .card img {
+    width: 250px; /* lebih kecil biar muat layar */
+    border-radius: 20px;
+  }
+
+  .scroll-btn {
+    font-size: 1.5rem; 
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card img {
+    width: 200px; /* layar kecil banget */
+    border-radius: 15px;
+  }
+
+  .scroll-btn {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}
+
 /* ===== FOOTER ===== */
 .footer {
   width: 100%;
