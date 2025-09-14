@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
 
 /* ===== RESET & GLOBAL ===== */
@@ -572,3 +573,579 @@ hr {
     height: 25px;
   }
 }
+=======
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
+
+/* ===== RESET & GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: white;
+  background-color: rgb(68, 32, 5);
+}
+
+.footer {
+  margin-top: auto;
+}
+
+/* ===== KONTEN ===== */
+.konten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, rgb(68, 32, 5), rgba(0, 0, 0, 0.3));
+}
+
+.video-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+}
+
+.konten-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  gap: 1em;
+  padding: 2em;
+}
+
+/* ===== PROFILE SLIDER ===== */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+.carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth; /* biar halus */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  display: flex;
+  gap: 10px;
+}
+
+.card img {
+  width: 350px;
+  border-radius: 35px;
+  flex-shrink: 0;
+}
+
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--brand-color, #333);
+  color: wheat;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.scroll-btn.kiri {
+  left: 10px;
+}
+
+.scroll-btn.kanan {
+  right: 10px;
+}
+
+/* ✅ Responsive untuk HP */
+@media (max-width: 768px) {
+  .card img {
+    width: 250px; /* lebih kecil biar muat layar */
+    border-radius: 20px;
+  }
+
+  .scroll-btn {
+    font-size: 1.5rem; 
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card img {
+    width: 200px; /* layar kecil banget */
+    border-radius: 15px;
+  }
+
+  .scroll-btn {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  background-color: black;
+}
+
+/* Sponsor Section */
+.sponsor-section {
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sponsor-section h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.sponsor-logos {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-items: center;
+  animation: slide 20s linear infinite;
+}
+
+.sponsor-logos img {
+  width: 80px;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* D.Mart Section */
+.footer-main {
+  text-align: center;
+  max-width: 500px;
+}
+
+.footer-main h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.footer-main p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Sosial Media */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-links a {
+  color: antiquewhite;
+  text-decoration: none;
+  font-size: 45px;
+}
+
+/* ===== LAIN-LAIN ===== */
+hr {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px solid #ccc;
+}
+
+.text {
+  display: flex;
+  gap: 0.5em;
+  margin-left: 2em;
+}
+
+.text img {
+  width: 150px;
+  height: auto;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* HP sedang */
+@media (max-width: 768px) {
+  /* Konten pertama */
+  .konten {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .img-konten {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .video-bg {
+    object-fit: cover;
+  }
+
+  /* Konten-2 */
+  .konten-2 {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .konten-2 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Slider */
+  .profile-content img {
+    width: 200px;
+  }
+
+  /* Teks */
+  .text {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 500px) {
+  .img-konten {
+    max-width: 60%;
+  }
+}
+
+/* Sangat kecil */
+@media (max-width: 480px) {
+  .sponsor-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sponsor-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .text img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+  }
+
+  .dokumentasi-talenta video {
+    display: block;
+    width: 150px;
+    height: auto;
+  }
+}
+
+/* ===== DOKUMENTASI ===== */
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 750px;
+}
+
+.left img {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.right {
+  display: block;
+  width: 250px;
+}
+
+.right img {
+  width: 100%;
+}
+
+/* part2 */
+.gallery2 {
+  display: flex;
+  justify-content: center;
+}
+
+.right2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 750px;
+}
+
+.right2 img {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.left2 {
+  display: block;
+  width: 225px;
+}
+
+.left2 img {
+  width: 100%;
+}
+
+/* part3 */
+.gallery3 {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.left3,
+.right3,
+.center3 {
+  display: block;
+}
+
+.left3 {
+  width: 350px;
+}
+
+.left3 img {
+  width: 100%;
+}
+
+.right3 {
+  width: 350px;
+}
+
+.right3 img {
+  width: 100%;
+}
+
+.center3 {
+  width: 225px;
+}
+
+.center3 img {
+  width: 100%;
+}
+
+.full-gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 750px;
+}
+
+.left img {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.right {
+  display: block;
+  width: 250px;
+}
+
+.right img {
+  width: 100%;
+}
+
+/* part2 */
+.gallery2 {
+  display: flex;
+  justify-content: center;
+}
+
+.right2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 750px;
+}
+
+.right2 img {
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.left2 {
+  display: block;
+  width: 225px;
+}
+
+.left2 img {
+  width: 100%;
+}
+
+/* part3 */
+.gallery3 {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.left3,
+.right3,
+.center3 {
+  display: block;
+}
+
+.left3 {
+  width: 350px;
+}
+
+.left3 img {
+  width: 100%;
+}
+
+.right3 {
+  width: 350px;
+}
+
+.right3 img {
+  width: 100%;
+}
+
+.center3 {
+  width: 225px;
+}
+
+.center3 img {
+  width: 100%;
+}
+
+.full-gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive khusus gallery */
+@media (max-width: 768px) {
+  .left img,
+  .right2 img,
+  .left2 img,
+  .left3 img,
+  .right3 img,
+  .center3 img {
+    padding: 8px; /* lebih kecil dari 15px */
+  }
+
+  .gallery3 {
+    gap: 0.8em; /* kurangi gap antar kolom */
+  }
+}
+
+@media (max-width: 480px) {
+  .left img,
+  .right2 img,
+  .left2 img,
+  .left3 img,
+  .right3 img,
+  .center3 img {
+    padding: 5px; /* makin rapat untuk layar kecil */
+  }
+
+  .gallery3 {
+    gap: 0.5em;
+  }
+}
+
+/* Responsif untuk footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  /* Sponsor logos jadi 3 kolom di HP */
+  .sponsor-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .sponsor-logos img {
+    width: 60px; /* logo mengecil biar muat */
+  }
+
+  /* Bagian D.Mart teks */
+  .footer-main {
+    max-width: 100%;
+    margin-top: 15px;
+  }
+
+  /* Sosial media link */
+  .social-links {
+    margin-top: 10px;
+    gap: 12px;
+  }
+  .social-links img {
+    width: 25px;
+    height: 25px;
+  }
+}
+>>>>>>> e0b8833 (Update project)
